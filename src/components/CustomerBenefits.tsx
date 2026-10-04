@@ -1,3 +1,4 @@
+import { partner } from "@/lib/partner";
 import { CheckCircle2, Lock, Timer, WalletCards, Zap, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { METHODS, MethodMark } from "./CheckoutMock";
@@ -20,7 +21,7 @@ function PhoneMock() {
           <div className="mx-auto mt-2 h-1.5 w-16 rounded-full bg-ink/15" aria-hidden />
           <div className="space-y-4 p-4 pt-3">
             <div className="flex items-center justify-between text-xs">
-              <span className="font-semibold">FlexDZ</span>
+              <span className="font-semibold">{partner.name}</span>
               <span className="text-ink-mute">{t.checkout.products}</span>
             </div>
             <div className="rounded-2xl bg-canvas p-3 text-center">

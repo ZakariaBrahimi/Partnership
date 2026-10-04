@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* FlexDZ default; overridden at runtime for other partners (src/lib/partner.ts) */
+    --flex-50: 255 241 244;
+    --flex-100: 255 224 231;
+    --flex-200: 255 191 205;
+    --flex-500: 250 43 84;
+    --flex-600: 217 26 76;
+    --flex-700: 168 6 63;
+  }
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;

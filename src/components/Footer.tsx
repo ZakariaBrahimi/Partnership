@@ -1,3 +1,4 @@
+import { partner } from "@/lib/partner";
 import { BrandLockup } from "./Logo";
 import { useLanguage } from "@/hooks/useLanguage";
 import { links } from "@/lib/config";
@@ -6,7 +7,7 @@ export function Footer() {
   const { t } = useLanguage();
   const f = t.footer;
   const items = [
-    { label: f.links.flexdz, href: links.flexdz, external: true },
+    { label: f.links.flexdz, href: partner.site, external: true },
     { label: f.links.mizaniyapay, href: links.mizaniyapay, external: true },
     { label: f.links.collaboration, href: "#collaboration" },
     { label: f.links.contact, href: "#contact" },
@@ -37,7 +38,7 @@ export function Footer() {
           </nav>
         </div>
         <p className="mt-10 border-t border-ink/10 pt-6 text-sm text-ink-mute">
-          © {new Date().getFullYear()} FlexDZ × MizaniyaPay
+          © {new Date().getFullYear()} {partner.name} × MizaniyaPay
         </p>
       </div>
     </footer>

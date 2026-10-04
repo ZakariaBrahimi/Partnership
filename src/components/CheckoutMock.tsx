@@ -1,3 +1,4 @@
+import { partner } from "@/lib/partner";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Banknote, Check, Lock, ShoppingBag } from "lucide-react";
@@ -47,7 +48,7 @@ export function CheckoutMock({ className }: { className?: string }) {
           <span className="grid h-7 w-7 place-items-center rounded-lg bg-flex-500 text-white">
             <ShoppingBag className="h-4 w-4" />
           </span>
-          FlexDZ · {t.checkout.storeLabel}
+          {partner.name} · {t.checkout.storeLabel}
         </div>
         <span className="flex items-center gap-1 text-xs text-ink-mute">
           <Lock className="h-3 w-3" /> SSL

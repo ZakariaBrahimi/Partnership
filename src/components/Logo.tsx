@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import flexLogo from "@/assets/brands/flexdz-logo.png";
+import { partner } from "@/lib/partner";
 import mizaniyaLogo from "@/assets/brands/mizaniyapay-logo.png";
 import { cn } from "@/lib/utils";
 
-const sources = { flex: flexLogo, mizaniya: mizaniyaLogo } as const;
-const names = { flex: "FlexDZ", mizaniya: "MizaniyaPay" } as const;
+const sources = { flex: partner.logo, mizaniya: mizaniyaLogo } as const;
+const names = { flex: partner.name, mizaniya: "MizaniyaPay" } as const;
 
 export function Logo({
   brand,

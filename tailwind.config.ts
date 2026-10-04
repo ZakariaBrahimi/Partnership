@@ -5,14 +5,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        // FlexDZ — sampled from the official logo (pink-red to magenta gradient).
+        // Partner brand scale — set per partner via CSS variables (see src/lib/partner.ts).
         flex: {
-          50: "#FFF1F4",
-          100: "#FFE0E7",
-          200: "#FFBFCD",
-          500: "#FA2B54",
-          600: "#D91A4C",
-          700: "#A8063F",
+          50: "rgb(var(--flex-50) / <alpha-value>)",
+          100: "rgb(var(--flex-100) / <alpha-value>)",
+          200: "rgb(var(--flex-200) / <alpha-value>)",
+          500: "rgb(var(--flex-500) / <alpha-value>)",
+          600: "rgb(var(--flex-600) / <alpha-value>)",
+          700: "rgb(var(--flex-700) / <alpha-value>)",
         },
         // MizaniyaPay — navy taken from the official logo (navy #1E4E67).
         mz: {

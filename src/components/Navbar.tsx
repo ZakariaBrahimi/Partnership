@@ -1,3 +1,4 @@
+import { partner } from "@/lib/partner";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -46,7 +47,7 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-4 sm:gap-3 sm:px-6 lg:px-8">
-        <a href="#top" aria-label="FlexDZ × MizaniyaPay" className="shrink-0 rounded-lg">
+        <a href="#top" aria-label={`${partner.name} × MizaniyaPay`} className="shrink-0 rounded-lg">
           <BrandLockup logoClass="h-5 min-[420px]:h-6 sm:h-7" className="gap-1.5 sm:gap-3" />
         </a>
 

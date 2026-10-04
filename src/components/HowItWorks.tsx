@@ -3,6 +3,7 @@ import { Section, SectionHeader } from "./Section";
 import { METHODS } from "./CheckoutMock";
 import { useLanguage } from "@/hooks/useLanguage";
 import { cn } from "@/lib/utils";
+import { partner } from "@/lib/partner";
 
 export function HowItWorks() {
   const { t } = useLanguage();
@@ -46,7 +47,7 @@ export function HowItWorks() {
             <motion.span
               variants={{
                 off: { backgroundColor: "#ffffff", color: "#6B7A89", scale: 0.9 },
-                on: { backgroundColor: i % 2 === 0 ? "#FA2B54" : "#1E4E67", color: "#ffffff", scale: 1 },
+                on: { backgroundColor: i % 2 === 0 ? partner.primary : "#1E4E67", color: "#ffffff", scale: 1 },
               }}
               transition={{ duration: 0.35 }}
               aria-label={`${t.how.stepLabel} ${i + 1}`}

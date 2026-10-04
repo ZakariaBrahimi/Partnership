@@ -6,6 +6,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { localize, partner } from "@/lib/partner";
 import {
   STORAGE_KEY,
   directionOf,
@@ -54,7 +55,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const active: Language = language ?? "en";
   const dir = directionOf(active);
-  const t = translations[active];
+  const t = useMemo(() => localize(translations[active], partner.name), [active]);
 
   // Keep <html>, <title> and SEO metadata in sync with the language.
   useEffect(() => {
