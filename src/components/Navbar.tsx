@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { BrandLockup } from "./Logo";
+import { links } from "@/lib/config";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Button } from "./ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -67,7 +68,7 @@ export function Navbar() {
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
           <LanguageSwitcher />
           <Button asChild size="sm" className="hidden sm:inline-flex">
-            <a href="#contact">{t.nav.cta}</a>
+            <a href={links.partnerLogin} target="_blank" rel="noreferrer">{t.nav.cta}</a>
           </Button>
           <button
             type="button"
@@ -107,7 +108,7 @@ export function Navbar() {
                 ))}
               </ul>
               <Button asChild className="mt-3 w-full sm:hidden">
-                <a href="#contact" onClick={() => setOpen(false)}>
+                <a href={links.partnerLogin} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
                   {t.nav.cta}
                 </a>
               </Button>

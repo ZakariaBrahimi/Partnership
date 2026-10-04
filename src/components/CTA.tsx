@@ -20,7 +20,7 @@ export function CTA() {
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">{c.text}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" variant="light" className="w-full sm:w-auto">
-                <a href={links.contactMizaniyaPay} target="_blank" rel="noreferrer">
+                <a href={links.partnerLogin} target="_blank" rel="noreferrer">
                   {c.primary}
                   <ArrowRight className="h-4 w-4 rtl:-scale-x-100" />
                 </a>

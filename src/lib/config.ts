@@ -5,6 +5,7 @@
 export const links = {
   flexdz: "https://flexdz.com",
   mizaniyapay: "https://mizaniyapay.com",
+  partnerLogin: "https://partner.mizaniyapay.dz/auth/login",
   contactMizaniyaPay: "https://mizaniyapay.com",
   privacy: "#",
 };
