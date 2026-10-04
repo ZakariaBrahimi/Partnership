@@ -51,16 +51,17 @@ export const PARTNERS: Record<PartnerId, Partner> = {
     name: "Tassyir",
     logo: tassyirLogo,
     site: "https://tassyir.io/",
-    // Neutral slate: the supplied logo is monochrome. Swap for the official brand color when known.
+    // Brand colors sampled from the official mark: cyan #7DDDE1 on deep teal #051E26.
+    // 500/600 are darker teals of the cyan so white text on them stays readable.
     scale: {
-      50: "248 250 252",
-      100: "241 245 249",
-      200: "226 232 240",
-      500: "71 85 105",
-      600: "51 65 85",
-      700: "30 41 59",
+      50: "236 250 251",
+      100: "211 244 246",
+      200: "125 221 225",
+      500: "19 150 161",
+      600: "14 124 134",
+      700: "5 30 38",
     },
-    primary: "#475569",
+    primary: "#1396A1",
   },
 };
 
