@@ -14,19 +14,19 @@ export default {
           600: "#E5560F",
           700: "#BF420B",
         },
-        // MizaniyaPay — navy taken from the official coin mark (app/icon.png).
+        // MizaniyaPay — navy taken from the official logo (navy #1E4E67).
         mz: {
           50: "#EEF5F8",
           100: "#D8E7EE",
           200: "#B4CFDC",
           500: "#2F6C8C",
           600: "#265A77",
-          700: "#1F4E69",
+          700: "#1E4E67",
           800: "#183D52",
           900: "#112C3B",
         },
         // MizaniyaPay — yellow accent from the coin mark.
-        sun: { 100: "#FEF9C3", 400: "#F2E30C", 500: "#D9CA00" },
+        sun: { 100: "#FEF9C3", 400: "#F8E71B", 500: "#E0CF00" },
         ink: { DEFAULT: "#0F1B24", soft: "#475766", mute: "#6B7A89" },
         canvas: "#FAFAF8",
       },
