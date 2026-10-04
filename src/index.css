@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+    overflow-x: hidden;
+  }
+  [dir="rtl"] body,
+  [dir="rtl"] button,
+  [dir="rtl"] input {
+    @apply font-arabic;
+  }
+  /* Arabic reads better with a little more leading and no negative tracking */
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3 {
+    letter-spacing: 0;
+    line-height: 1.35;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-mz-600;
+    outline-style: solid;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .brand-gradient-text {
+    @apply bg-gradient-to-r from-flex-500 to-mz-700 bg-clip-text text-transparent;
+  }
+  [dir="rtl"] .brand-gradient-text {
+    @apply bg-gradient-to-l;
+  }
+}
