@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import flexLogo from "@/assets/brands/flexdz-logo.svg";
+import flexLogo from "@/assets/brands/flexdz-logo.png";
 import mizaniyaLogo from "@/assets/brands/mizaniyapay-logo.png";
 import { cn } from "@/lib/utils";
 

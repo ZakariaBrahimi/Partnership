@@ -5,14 +5,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        // FlexDZ — TODO: replace with the official brand color if different.
+        // FlexDZ — sampled from the official logo (pink-red to magenta gradient).
         flex: {
-          50: "#FFF4ED",
-          100: "#FFE6D5",
-          200: "#FEC9A6",
-          500: "#F26B21",
-          600: "#E5560F",
-          700: "#BF420B",
+          50: "#FFF1F4",
+          100: "#FFE0E7",
+          200: "#FFBFCD",
+          500: "#FA2B54",
+          600: "#D91A4C",
+          700: "#A8063F",
         },
         // MizaniyaPay — navy taken from the official logo (navy #1E4E67).
         mz: {

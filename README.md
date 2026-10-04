@@ -20,7 +20,7 @@ auto-detected (build `npm run build`, output `dist`).
 
 | What | Where |
 | --- | --- |
-| Official FlexDZ logo (still a **placeholder**) | `src/assets/brands/flexdz-logo.svg` — see the README there |
+| Favicon & social image (placeholders) | `public/` — see the README there |
 | FlexDZ brand color (assumed orange) | `tailwind.config.ts` → `colors.flex` |
 | External links / contact target | `src/lib/config.ts` |
 | Favicon & social image (placeholders) | `public/favicon.svg`, `public/favicon.png`, `public/og-image.png` |
