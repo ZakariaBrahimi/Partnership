@@ -375,12 +375,6 @@ const en = {
     },
     note: "Digital payments help reduce these challenges but do not eliminate every operational risk.",
   },
-  partners: {
-    id: "partners",
-    eyebrow: "Our network",
-    title: "Our current partnerships",
-    text: "A growing network of partners working with us to bring Algerian e-commerce online.",
-  },
   trust: {
     eyebrow: "Trust",
     title: "Designed around secure payment experiences",
@@ -787,12 +781,6 @@ const fr: Translation = {
     },
     note: "Le paiement digital aide à réduire ces difficultés, sans éliminer tous les risques opérationnels.",
   },
-  partners: {
-    id: "partners",
-    eyebrow: "Notre réseau",
-    title: "Nos partenariats actuels",
-    text: "Un réseau de partenaires en croissance, mobilisés pour amener le e-commerce algérien en ligne.",
-  },
   trust: {
     eyebrow: "Confiance",
     title: "Pensé autour d'expériences de paiement sécurisées",
@@ -1193,12 +1181,6 @@ const ar: Translation = {
       ],
     },
     note: "تساعد المدفوعات الرقمية على الحدّ من هذه التحديات، لكنها لا تلغي جميع المخاطر التشغيلية.",
-  },
-  partners: {
-    id: "partners",
-    eyebrow: "شبكتنا",
-    title: "شراكاتنا الحالية",
-    text: "شبكة شركاء متنامية تعمل معنا لنقل التجارة الإلكترونية الجزائرية إلى الإنترنت.",
   },
   trust: {
     eyebrow: "الثقة",
