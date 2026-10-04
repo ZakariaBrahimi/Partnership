@@ -14,6 +14,7 @@ import { FutureOpportunities } from "@/components/FutureOpportunities";
 import { PartnershipValue } from "@/components/PartnershipValue";
 import { MerchantJourney } from "@/components/MerchantJourney";
 import { Comparison } from "@/components/Comparison";
+import { Partners } from "@/components/Partners";
 import { TrustSection } from "@/components/TrustSection";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
@@ -53,6 +54,7 @@ export default function App() {
               <PartnershipValue />
               <MerchantJourney />
               <Comparison />
+              <Partners />
               <TrustSection />
               <CTA />
             </main>
