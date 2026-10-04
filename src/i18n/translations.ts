@@ -52,7 +52,7 @@ const en = {
   hero: {
     badge: "Strategic collaboration",
     title: "E-commerce meets digital payments.",
-    text: "A strategic collaboration designed to help FlexDZ merchants accept secure digital payments and provide their customers with a smoother online shopping experience.",
+    text: "A strategic collaboration to bring Algerian shoppers and merchants to online payments: on FlexDZ, every checkout offers Cash on Delivery or MizaniyaPay e-payment.",
     primary: "Discover the collaboration",
     secondary: "Talk to us",
     logosLabel: "FlexDZ and MizaniyaPay partnership",
@@ -65,6 +65,12 @@ const en = {
     paymentMethod: "Payment method",
     selected: "Selected",
     paySecurely: "Pay securely",
+    cod: "Cash on delivery",
+    codHint: "Pay the courier when your order arrives",
+    epay: "MizaniyaPay e-payment",
+    epayHint: "Pay online now, securely",
+    app: "MizaniyaPay app",
+    payVia: "Pay with",
   },
   overview: {
     id: "collaboration",
@@ -130,9 +136,9 @@ const en = {
   payments: {
     id: "payment-methods",
     eyebrow: "Payment methods",
-    title: "One integration. Multiple ways to pay.",
+    title: "One e-payment option. Multiple ways to pay.",
     cards: [
-      { name: "MizaniyaPay", text: "Pay directly using available MizaniyaPay funds." },
+      { name: "MizaniyaPay", text: "Pay in seconds with the MizaniyaPay app." },
       { name: "CIB", text: "Accept payments using Algerian CIB bank cards." },
       { name: "Edahabia", text: "Allow customers to pay using Edahabia cards." },
     ],
@@ -147,28 +153,28 @@ const en = {
     stepLabel: "Step",
     steps: [
       {
-        title: "Customer shops on FlexDZ",
-        text: "The customer browses a Flex-powered online store and adds products to the cart.",
+        title: "Merchant enables e-payment",
+        text: "On FlexDZ, the merchant offers Cash on Delivery or MizaniyaPay e-payment. Choosing e-payment starts with creating a MizaniyaPay account.",
       },
       {
-        title: "Customer proceeds to checkout",
-        text: "FlexDZ prepares the order and payment information.",
+        title: "Customer reaches checkout",
+        text: "Every checkout shows two options: Cash on Delivery or MizaniyaPay e-payment.",
       },
       {
-        title: "MizaniyaPay is selected",
-        text: "The customer chooses digital payment instead of Cash on Delivery.",
+        title: "Customer picks e-payment",
+        text: "The customer chooses to pay online instead of paying cash on delivery.",
       },
       {
         title: "Customer pays securely",
         text: "Payment can be completed using:",
       },
       {
-        title: "Payment confirmation",
-        text: "MizaniyaPay confirms the transaction to FlexDZ.",
+        title: "Payment confirmed",
+        text: "MizaniyaPay confirms the transaction and FlexDZ marks the order as paid.",
       },
       {
-        title: "Order becomes paid",
-        text: "FlexDZ automatically updates the order status and the merchant can continue fulfillment.",
+        title: "Merchant gets paid",
+        text: "Funds arrive in the merchant's MizaniyaPay account, to a personal bank account or the MizaniyaPartner account balance, and can be withdrawn later in cash or by bank transfer.",
       },
     ] as Item[],
   },
@@ -184,7 +190,7 @@ const en = {
       options: "Payment options",
       confirmation: "Payment confirmation",
       orderUpdated: "FlexDZ order updated",
-      merchant: "Merchant receives the payment",
+      merchant: "Merchant paid into MizaniyaPay account",
     },
   },
   merchants: {
@@ -196,10 +202,10 @@ const en = {
     paid: "Paid",
     awaiting: "Awaiting payment",
     items: [
-      { title: "Accept digital payments", text: "Expand beyond Cash on Delivery." },
+      { title: "Accept digital payments", text: "Offer e-payment next to Cash on Delivery and move customers online." },
       {
-        title: "Simplified setup",
-        text: "One payment integration available through the commerce platform.",
+        title: "Simple setup",
+        text: "Enable MizaniyaPay e-payment on FlexDZ and create your MizaniyaPay account to start.",
       },
       {
         title: "Real-time confirmation",
@@ -210,8 +216,8 @@ const en = {
         text: "Connect payment status with order status.",
       },
       {
-        title: "Flexible settlement",
-        text: "Depending on the MizaniyaPay merchant configuration, funds can be managed through the merchant payment ecosystem and settlement options.",
+        title: "Flexible payouts",
+        text: "Receive your money on a personal bank account or in your MizaniyaPartner account, and withdraw it later in cash or by bank transfer.",
       },
       {
         title: "Future capabilities",
@@ -225,7 +231,7 @@ const en = {
     items: [
       {
         title: "More payment options",
-        text: "MizaniyaPay, CIB or Edahabia — the customer picks.",
+        text: "Cash on Delivery or MizaniyaPay e-payment, with the MizaniyaPay app, CIB or Edahabia.",
       },
       {
         title: "Secure checkout",
@@ -255,12 +261,13 @@ const en = {
     scope: [
       "FlexDZ merchant checkout",
       "MizaniyaPay payment integration",
-      "MizaniyaPay account payment",
-      "CIB payment",
-      "Edahabia payment",
+      "MizaniyaPay merchant account creation",
+      "MizaniyaPay app payment",
+      "CIB and Edahabia payment",
       "Payment confirmation",
       "Order payment-status synchronization",
-      "Merchant payment settlement",
+      "Payout to a bank account or MizaniyaPartner account",
+      "Withdrawal in cash or by bank transfer",
     ],
     items: [
       {
@@ -276,8 +283,8 @@ const en = {
         text: "Future integration could allow payment refunds to be initiated from the commerce workflow.",
       },
       {
-        title: "Merchant onboarding",
-        text: "Simplify how FlexDZ merchants create or connect their MizaniyaPay merchant account.",
+        title: "Instant withdrawals",
+        text: "Faster ways to move money from the MizaniyaPay account to cash or a bank account.",
       },
       {
         title: "Payment analytics",
@@ -318,8 +325,8 @@ const en = {
     s2Title: "Instead of selecting",
     cod: "Cash on Delivery",
     s2Select: "the customer selects",
-    online: "Pay online",
-    s3: "Then chooses",
+    online: "MizaniyaPay e-payment",
+    s3: "Then pays with",
     or: "or",
     s4Title: "Payment succeeds.",
     s4Text: "FlexDZ receives the confirmation.",
@@ -442,7 +449,7 @@ const fr: Translation = {
   hero: {
     badge: "Collaboration stratégique",
     title: "Le e-commerce rencontre le paiement digital.",
-    text: "Une collaboration stratégique permettant aux marchands FlexDZ d'accepter des paiements digitaux sécurisés et d'offrir à leurs clients une expérience d'achat en ligne plus fluide.",
+    text: "Une collaboration stratégique pour amener les acheteurs et les marchands algériens vers le paiement en ligne : sur FlexDZ, chaque commande propose le paiement à la livraison ou le paiement électronique MizaniyaPay.",
     primary: "Découvrir la collaboration",
     secondary: "Parlons-en",
     logosLabel: "Partenariat FlexDZ et MizaniyaPay",
@@ -455,6 +462,12 @@ const fr: Translation = {
     paymentMethod: "Moyen de paiement",
     selected: "Sélectionné",
     paySecurely: "Payer en toute sécurité",
+    cod: "Paiement à la livraison",
+    codHint: "Payez le livreur à la réception de votre commande",
+    epay: "Paiement électronique MizaniyaPay",
+    epayHint: "Payez en ligne dès maintenant, en toute sécurité",
+    app: "Application MizaniyaPay",
+    payVia: "Payer avec",
   },
   overview: {
     id: "collaboration",
@@ -521,11 +534,11 @@ const fr: Translation = {
   payments: {
     id: "payment-methods",
     eyebrow: "Moyens de paiement",
-    title: "Une seule intégration. Plusieurs façons de payer.",
+    title: "Un seul paiement électronique. Plusieurs façons de payer.",
     cards: [
       {
         name: "MizaniyaPay",
-        text: "Payez directement avec le solde MizaniyaPay disponible.",
+        text: "Payez en quelques secondes avec l'application MizaniyaPay.",
       },
       {
         name: "CIB",
@@ -547,28 +560,28 @@ const fr: Translation = {
     stepLabel: "Étape",
     steps: [
       {
-        title: "Le client achète sur FlexDZ",
-        text: "Le client parcourt une boutique en ligne propulsée par Flex et ajoute des produits au panier.",
+        title: "Le marchand active le paiement électronique",
+        text: "Sur FlexDZ, le marchand propose le paiement à la livraison ou le paiement électronique MizaniyaPay. Choisir ce dernier commence par la création d'un compte MizaniyaPay.",
       },
       {
-        title: "Le client passe à la caisse",
-        text: "FlexDZ prépare la commande et les informations de paiement.",
+        title: "Le client arrive à la caisse",
+        text: "Chaque commande affiche deux options : paiement à la livraison ou paiement électronique MizaniyaPay.",
       },
       {
-        title: "MizaniyaPay est sélectionné",
-        text: "Le client choisit le paiement digital plutôt que le paiement à la livraison.",
+        title: "Le client choisit le paiement électronique",
+        text: "Le client choisit de payer en ligne plutôt qu'à la livraison.",
       },
       {
         title: "Le client paie en toute sécurité",
         text: "Le paiement peut être effectué avec :",
       },
       {
-        title: "Confirmation du paiement",
-        text: "MizaniyaPay confirme la transaction à FlexDZ.",
+        title: "Paiement confirmé",
+        text: "MizaniyaPay confirme la transaction et FlexDZ marque la commande comme payée.",
       },
       {
-        title: "La commande passe à « payée »",
-        text: "FlexDZ met automatiquement à jour le statut de la commande et le marchand peut poursuivre la préparation.",
+        title: "Le marchand est payé",
+        text: "Les fonds arrivent sur le compte MizaniyaPay du marchand, vers un compte bancaire personnel ou le solde du compte MizaniyaPartner, et peuvent être retirés plus tard en espèces ou par virement bancaire.",
       },
     ],
   },
@@ -584,7 +597,7 @@ const fr: Translation = {
       options: "Moyens de paiement",
       confirmation: "Confirmation du paiement",
       orderUpdated: "Commande FlexDZ mise à jour",
-      merchant: "Le marchand reçoit le paiement",
+      merchant: "Le marchand est payé sur son compte MizaniyaPay",
     },
   },
   merchants: {
@@ -598,11 +611,11 @@ const fr: Translation = {
     items: [
       {
         title: "Accepter les paiements digitaux",
-        text: "Aller au-delà du paiement à la livraison.",
+        text: "Proposez le paiement électronique en plus du paiement à la livraison et amenez vos clients vers le paiement en ligne.",
       },
       {
-        title: "Mise en place simplifiée",
-        text: "Une seule intégration de paiement, disponible via la plateforme de commerce.",
+        title: "Mise en place simple",
+        text: "Activez le paiement électronique MizaniyaPay sur FlexDZ et créez votre compte MizaniyaPay pour commencer.",
       },
       {
         title: "Confirmation en temps réel",
@@ -613,8 +626,8 @@ const fr: Translation = {
         text: "Reliez le statut du paiement au statut de la commande.",
       },
       {
-        title: "Règlement flexible",
-        text: "Selon la configuration marchand MizaniyaPay, les fonds peuvent être gérés via l'écosystème de paiement du marchand et ses options de règlement.",
+        title: "Versements flexibles",
+        text: "Recevez votre argent sur un compte bancaire personnel ou sur votre compte MizaniyaPartner, puis retirez-le plus tard en espèces ou par virement bancaire.",
       },
       {
         title: "Capacités futures",
@@ -628,7 +641,7 @@ const fr: Translation = {
     items: [
       {
         title: "Plus de moyens de paiement",
-        text: "MizaniyaPay, CIB ou Edahabia : le client choisit.",
+        text: "Paiement à la livraison ou paiement électronique MizaniyaPay, avec l'application MizaniyaPay, CIB ou Edahabia.",
       },
       {
         title: "Paiement sécurisé",
@@ -654,12 +667,13 @@ const fr: Translation = {
     scope: [
       "Paiement des marchands FlexDZ",
       "Intégration du paiement MizaniyaPay",
-      "Paiement par compte MizaniyaPay",
-      "Paiement CIB",
-      "Paiement Edahabia",
+      "Création du compte marchand MizaniyaPay",
+      "Paiement via l'application MizaniyaPay",
+      "Paiement CIB et Edahabia",
       "Confirmation du paiement",
       "Synchronisation du statut de paiement des commandes",
-      "Règlement des paiements marchands",
+      "Versement sur compte bancaire ou compte MizaniyaPartner",
+      "Retrait en espèces ou par virement bancaire",
     ],
     items: [
       {
@@ -675,8 +689,8 @@ const fr: Translation = {
         text: "Une intégration future pourrait permettre de lancer des remboursements depuis le flux de commerce.",
       },
       {
-        title: "Onboarding des marchands",
-        text: "Simplifier la création ou la connexion du compte marchand MizaniyaPay pour les marchands FlexDZ.",
+        title: "Retraits instantanés",
+        text: "Des moyens plus rapides de transférer l'argent du compte MizaniyaPay vers des espèces ou un compte bancaire.",
       },
       {
         title: "Analytique des paiements",
@@ -717,8 +731,8 @@ const fr: Translation = {
     s2Title: "Au lieu de choisir",
     cod: "Paiement à la livraison",
     s2Select: "le client choisit",
-    online: "Payer en ligne",
-    s3: "Puis il choisit",
+    online: "Paiement électronique MizaniyaPay",
+    s3: "Puis il paie avec",
     or: "ou",
     s4Title: "Le paiement réussit.",
     s4Text: "FlexDZ reçoit la confirmation.",
@@ -841,7 +855,7 @@ const ar: Translation = {
   hero: {
     badge: "شراكة استراتيجية",
     title: "التجارة الإلكترونية تلتقي بالدفع الرقمي",
-    text: "شراكة استراتيجية تمكّن تجار FlexDZ من قبول المدفوعات الرقمية الآمنة وتقديم تجربة شراء إلكترونية أكثر سلاسة لعملائهم.",
+    text: "شراكة استراتيجية لتشجيع المجتمع الجزائري، مشترين وتجاراً، على الدفع عبر الإنترنت: في FlexDZ يقدّم كل طلب خيارين، الدفع عند الاستلام أو الدفع الإلكتروني عبر MizaniyaPay.",
     primary: "اكتشف الشراكة",
     secondary: "تحدّث إلينا",
     logosLabel: "شراكة FlexDZ وMizaniyaPay",
@@ -854,6 +868,12 @@ const ar: Translation = {
     paymentMethod: "وسيلة الدفع",
     selected: "محدَّدة",
     paySecurely: "ادفع بأمان",
+    cod: "الدفع عند الاستلام",
+    codHint: "ادفع للموزّع عند وصول طلبك",
+    epay: "الدفع الإلكتروني عبر MizaniyaPay",
+    epayHint: "ادفع عبر الإنترنت الآن وبأمان",
+    app: "تطبيق MizaniyaPay",
+    payVia: "ادفع عبر",
   },
   overview: {
     id: "collaboration",
@@ -919,11 +939,11 @@ const ar: Translation = {
   payments: {
     id: "payment-methods",
     eyebrow: "وسائل الدفع",
-    title: "تكامل واحد. وسائل دفع متعددة.",
+    title: "خيار دفع إلكتروني واحد. وسائل دفع متعددة.",
     cards: [
       {
         name: "MizaniyaPay",
-        text: "ادفع مباشرة باستخدام رصيد MizaniyaPay المتاح.",
+        text: "ادفع في ثوانٍ عبر تطبيق MizaniyaPay.",
       },
       { name: "CIB", text: "اقبل المدفوعات ببطاقات CIB البنكية الجزائرية." },
       {
@@ -942,16 +962,16 @@ const ar: Translation = {
     stepLabel: "الخطوة",
     steps: [
       {
-        title: "العميل يتسوّق عبر FlexDZ",
-        text: "يتصفّح العميل متجراً إلكترونياً مبنياً على Flex ويضيف المنتجات إلى السلة.",
+        title: "التاجر يفعّل الدفع الإلكتروني",
+        text: "في FlexDZ يقدّم التاجر خيارين: الدفع عند الاستلام أو الدفع الإلكتروني عبر MizaniyaPay. واختيار الدفع الإلكتروني يبدأ بإنشاء حساب MizaniyaPay.",
       },
       {
-        title: "العميل ينتقل إلى إتمام الطلب",
-        text: "تُجهّز FlexDZ الطلب وبيانات الدفع.",
+        title: "العميل يصل إلى إتمام الطلب",
+        text: "تعرض كل صفحة إتمام طلب خيارين: الدفع عند الاستلام أو الدفع الإلكتروني عبر MizaniyaPay.",
       },
       {
-        title: "اختيار MizaniyaPay",
-        text: "يختار العميل الدفع الرقمي بدلاً من الدفع عند الاستلام.",
+        title: "العميل يختار الدفع الإلكتروني",
+        text: "يختار العميل الدفع عبر الإنترنت بدلاً من الدفع عند الاستلام.",
       },
       {
         title: "العميل يدفع بأمان",
@@ -959,11 +979,11 @@ const ar: Translation = {
       },
       {
         title: "تأكيد الدفع",
-        text: "تؤكّد MizaniyaPay العملية لـ FlexDZ.",
+        text: "تؤكّد MizaniyaPay العملية وتحوّل FlexDZ حالة الطلب إلى مدفوع.",
       },
       {
-        title: "يصبح الطلب مدفوعاً",
-        text: "تحدّث FlexDZ حالة الطلب تلقائياً، ويمكن للتاجر متابعة تجهيز الطلب.",
+        title: "التاجر يستلم أمواله",
+        text: "تصل الأموال إلى حساب التاجر في MizaniyaPay، إلى حساب بنكي شخصي أو إلى رصيد حساب MizaniyaPartner، ويمكن سحبها لاحقاً نقداً أو عبر تحويل بنكي.",
       },
     ],
   },
@@ -979,7 +999,7 @@ const ar: Translation = {
       options: "وسائل الدفع",
       confirmation: "تأكيد الدفع",
       orderUpdated: "تحديث الطلب في FlexDZ",
-      merchant: "التاجر يستلم المبلغ",
+      merchant: "التاجر يستلم المبلغ في حساب MizaniyaPay",
     },
   },
   merchants: {
@@ -993,11 +1013,11 @@ const ar: Translation = {
     items: [
       {
         title: "قبول المدفوعات الرقمية",
-        text: "توسّع إلى ما هو أبعد من الدفع عند الاستلام.",
+        text: "قدّم الدفع الإلكتروني إلى جانب الدفع عند الاستلام وانقل عملاءك إلى الإنترنت.",
       },
       {
-        title: "إعداد مبسّط",
-        text: "تكامل دفع واحد متاح عبر منصة التجارة.",
+        title: "إعداد بسيط",
+        text: "فعّل الدفع الإلكتروني عبر MizaniyaPay في FlexDZ وأنشئ حساب MizaniyaPay للبدء.",
       },
       {
         title: "تأكيد فوري",
@@ -1008,8 +1028,8 @@ const ar: Translation = {
         text: "اربط حالة الدفع بحالة الطلب.",
       },
       {
-        title: "تسوية مرنة",
-        text: "بحسب إعدادات حساب التاجر في MizaniyaPay، يمكن إدارة الأموال عبر منظومة الدفع الخاصة بالتاجر وخيارات التسوية المتاحة.",
+        title: "تحويلات مرنة",
+        text: "استلم أموالك في حساب بنكي شخصي أو في حساب MizaniyaPartner، واسحبها لاحقاً نقداً أو عبر تحويل بنكي.",
       },
       {
         title: "إمكانات مستقبلية",
@@ -1023,7 +1043,7 @@ const ar: Translation = {
     items: [
       {
         title: "خيارات دفع أكثر",
-        text: "MizaniyaPay أو CIB أو Edahabia — والاختيار للعميل.",
+        text: "الدفع عند الاستلام أو الدفع الإلكتروني عبر MizaniyaPay، بتطبيق MizaniyaPay أو CIB أو Edahabia.",
       },
       {
         title: "إتمام طلب آمن",
@@ -1049,12 +1069,13 @@ const ar: Translation = {
     scope: [
       "إتمام الطلب لدى تجار FlexDZ",
       "تكامل الدفع مع MizaniyaPay",
-      "الدفع من حساب MizaniyaPay",
-      "الدفع ببطاقة CIB",
-      "الدفع ببطاقة Edahabia",
+      "إنشاء حساب التاجر في MizaniyaPay",
+      "الدفع عبر تطبيق MizaniyaPay",
+      "الدفع ببطاقتي CIB وEdahabia",
       "تأكيد الدفع",
       "مزامنة حالة دفع الطلبات",
-      "تسوية مدفوعات التجار",
+      "التحويل إلى حساب بنكي أو حساب MizaniyaPartner",
+      "السحب نقداً أو عبر تحويل بنكي",
     ],
     items: [
       {
@@ -1070,8 +1091,8 @@ const ar: Translation = {
         text: "قد يتيح تكامل مستقبلي بدء عمليات استرجاع المبالغ من مسار إدارة الطلبات.",
       },
       {
-        title: "تسجيل التجار",
-        text: "تبسيط إنشاء تجار FlexDZ لحساب التاجر في MizaniyaPay أو ربطه.",
+        title: "سحب فوري",
+        text: "طرق أسرع لتحويل الأموال من حساب MizaniyaPay إلى نقد أو حساب بنكي.",
       },
       {
         title: "تحليلات المدفوعات",
@@ -1112,8 +1133,8 @@ const ar: Translation = {
     s2Title: "بدلاً من اختيار",
     cod: "الدفع عند الاستلام",
     s2Select: "يختار العميل",
-    online: "الدفع عبر الإنترنت",
-    s3: "ثم يختار",
+    online: "الدفع الإلكتروني عبر MizaniyaPay",
+    s3: "ثم يدفع عبر",
     or: "أو",
     s4Title: "ينجح الدفع.",
     s4Text: "تستلم FlexDZ التأكيد.",

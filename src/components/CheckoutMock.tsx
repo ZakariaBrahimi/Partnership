@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Check, Lock, ShoppingBag } from "lucide-react";
+import { Banknote, Check, Lock, ShoppingBag } from "lucide-react";
 import { Button } from "./ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 import { cn } from "@/lib/utils";
@@ -29,9 +29,10 @@ export function MethodMark({ method, className }: { method: Method; className?: 
   );
 }
 
-/** Mock FlexDZ checkout with MizaniyaPay preselected. */
+/** Mock FlexDZ checkout: Cash on Delivery or MizaniyaPay e-payment (app / CIB / Edahabia). */
 export function CheckoutMock({ className }: { className?: string }) {
   const { t } = useLanguage();
+  const [option, setOption] = useState<"cod" | "epay">("epay");
   const [selected, setSelected] = useState<Method>("MizaniyaPay");
 
   return (
@@ -74,20 +75,18 @@ export function CheckoutMock({ className }: { className?: string }) {
           <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute rtl:tracking-normal">
             {t.checkout.paymentMethod}
           </p>
-          {METHODS.map((m) => {
-            const active = selected === m;
+          {(["cod", "epay"] as const).map((o) => {
+            const active = option === o;
             return (
               <button
-                key={m}
+                key={o}
                 type="button"
                 role="radio"
                 aria-checked={active}
-                onClick={() => setSelected(m)}
+                onClick={() => setOption(o)}
                 className={cn(
                   "relative flex w-full items-center gap-3 rounded-2xl border p-3 text-start transition-colors",
-                  active
-                    ? "border-mz-700 bg-mz-50"
-                    : "border-ink/10 bg-white hover:border-ink/25",
+                  active ? "border-mz-700 bg-mz-50" : "border-ink/10 bg-white hover:border-ink/25",
                 )}
               >
                 {active && (
@@ -97,13 +96,21 @@ export function CheckoutMock({ className }: { className?: string }) {
                     transition={{ type: "spring", stiffness: 400, damping: 32 }}
                   />
                 )}
-                <MethodMark method={m} />
-                <span className="relative flex-1 text-sm font-semibold">{m}</span>
-                {active && m === "MizaniyaPay" && (
-                  <span className="relative rounded-full bg-sun-400 px-2 py-0.5 text-[10px] font-bold text-mz-900">
-                    {t.checkout.selected}
+                <span
+                  aria-hidden
+                  className={cn(
+                    "relative grid h-9 w-9 shrink-0 place-items-center rounded-xl",
+                    o === "cod" ? "bg-ink/5 text-ink-soft" : "bg-mz-700 text-sun-400",
+                  )}
+                >
+                  {o === "cod" ? <Banknote className="h-5 w-5" /> : <span className="text-[11px] font-extrabold">MP</span>}
+                </span>
+                <span className="relative flex-1">
+                  <span className="block text-sm font-semibold">{o === "cod" ? t.checkout.cod : t.checkout.epay}</span>
+                  <span className="block text-xs text-ink-mute">
+                    {o === "cod" ? t.checkout.codHint : t.checkout.epayHint}
                   </span>
-                )}
+                </span>
                 <span
                   className={cn(
                     "relative grid h-5 w-5 place-items-center rounded-full border",
@@ -115,6 +122,28 @@ export function CheckoutMock({ className }: { className?: string }) {
               </button>
             );
           })}
+
+          {option === "epay" && (
+            <div className="ms-4 space-y-1.5 border-s-2 border-mz-700/20 ps-3">
+              <p className="text-[11px] font-semibold text-ink-mute">{t.checkout.payVia}</p>
+              <div className="flex flex-wrap gap-1.5">
+                {METHODS.map((m) => (
+                  <button
+                    key={m}
+                    type="button"
+                    onClick={() => setSelected(m)}
+                    aria-pressed={selected === m}
+                    className={cn(
+                      "flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-semibold transition-colors",
+                      selected === m ? "border-mz-700 bg-mz-700 text-white" : "border-ink/15 bg-white text-ink-soft hover:border-ink/30",
+                    )}
+                  >
+                    {m === "MizaniyaPay" ? t.checkout.app : m}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="flex items-center justify-between border-t border-dashed border-ink/10 pt-4">
