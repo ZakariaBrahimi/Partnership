@@ -1,7 +1,8 @@
 import flexLogo from "@/assets/brands/flexdz-logo.png";
 import ayorLogo from "@/assets/brands/ayor-logo.svg";
+import tassyirLogo from "@/assets/brands/tassyir-logo.svg";
 
-export type PartnerId = "flexdz" | "ayor";
+export type PartnerId = "flexdz" | "ayor" | "tassyir";
 
 export interface Partner {
   id: PartnerId;
@@ -45,14 +46,34 @@ export const PARTNERS: Record<PartnerId, Partner> = {
     },
     primary: "#7269F8",
   },
+  tassyir: {
+    id: "tassyir",
+    name: "Tassyir",
+    logo: tassyirLogo,
+    site: "https://tassyir.io/",
+    // Neutral slate: the supplied logo is monochrome. Swap for the official brand color when known.
+    scale: {
+      50: "248 250 252",
+      100: "241 245 249",
+      200: "226 232 240",
+      500: "71 85 105",
+      600: "51 65 85",
+      700: "30 41 59",
+    },
+    primary: "#475569",
+  },
 };
 
-/** Ayor on any host containing "ayor", on `/ayor`, or with `?partner=ayor`; FlexDZ otherwise. */
+/** Partner from `?partner=<id>`, a host or first path segment containing its id (e.g. ayor-mizaniyapay.vercel.app, /ayor); FlexDZ otherwise. */
 export function resolvePartner(): Partner {
   const { hostname, pathname, search } = window.location;
   const forced = new URLSearchParams(search).get("partner");
-  if (forced === "ayor" || forced === "flexdz") return PARTNERS[forced];
-  if (hostname.includes("ayor") || /^\/ayor(\/|$)/.test(pathname)) return PARTNERS.ayor;
+  if (forced && forced in PARTNERS) return PARTNERS[forced as PartnerId];
+  const first = pathname.split("/")[1]?.toLowerCase() ?? "";
+  for (const id of Object.keys(PARTNERS) as PartnerId[]) {
+    if (id === "flexdz") continue;
+    if (hostname.includes(id) || first === id) return PARTNERS[id];
+  }
   return PARTNERS.flexdz;
 }
 
